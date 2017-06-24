@@ -1,0 +1,13 @@
+{
+  "name": "miyadaiku.themes.fontawesome",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miyadaiku/miyadaiku-themes-fontawesome.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^4.7.2"
+  }
+}
