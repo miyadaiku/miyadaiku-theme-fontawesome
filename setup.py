@@ -22,7 +22,7 @@ copy_files = [
 
 setup(
     name="miyadaiku.themes.fontawesome",
-    version="0.0.1",
+    version="0.0.2",
     author="Atsuo Ishimoto",
     license="MIT",
     classifiers=[
