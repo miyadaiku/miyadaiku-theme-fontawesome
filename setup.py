@@ -19,10 +19,9 @@ copy_files = [
     [srcdir+'/fonts/', ['*', ], filesdir+'/static/fontawesome/fonts/']
 ]
 
-
 setup(
     name="miyadaiku.themes.fontawesome",
-    version="0.0.2",
+    version="0.0.3",
     author="Atsuo Ishimoto",
     license="MIT",
     classifiers=[
