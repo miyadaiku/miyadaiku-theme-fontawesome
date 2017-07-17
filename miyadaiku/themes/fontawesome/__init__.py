@@ -15,3 +15,5 @@ def load_package(site):
         site, __name__, src_path, DEST_PATH+fontawesome, bin_loader)
     site.contents.add(content)
     site.config.add('/', {'fontawesome_path': DEST_PATH+fontawesome})
+
+    site.add_template_module('fontawesome', 'miyadaiku.themes.fontawesome!macros.html')

@@ -34,6 +34,6 @@ Add following code to your template files.
 
 ::
 
-   <!-- include fontawesome.min.css -->
-   {% include 'fontawesome.css' %}
+  <!-- include fontawesome -->
+  {{ fontawesome.load_css(page) }}
 
