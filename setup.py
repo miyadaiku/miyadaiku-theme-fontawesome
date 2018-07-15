@@ -11,7 +11,7 @@ requires = [
     "miyadaiku"
 ]
 
-srcdir = 'node_modules/font-awesome/'
+srcdir = 'node_modules/@fortawesome/fontawesome-free/'
 destdir = 'miyadaiku/themes/fontawesome/externals'
 filesdir = 'miyadaiku/themes/fontawesome/files'
 copy_files = [
@@ -21,7 +21,7 @@ copy_files = [
 
 setup(
     name="miyadaiku.themes.fontawesome",
-    version="0.0.5",
+    version="0.0.6",
     author="Atsuo Ishimoto",
     license="MIT",
     classifiers=[
