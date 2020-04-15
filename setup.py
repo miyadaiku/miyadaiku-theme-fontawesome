@@ -1,26 +1,25 @@
 import os
 import pathlib
 from setuptools import setup, find_packages
-from miyadaiku.common import setuputils
+from miyadaiku import setuputils
 
 DIR = pathlib.Path(__file__).resolve().parent
-os.chdir(DIR)
 
 
 requires = [
     "miyadaiku"
 ]
 
-srcdir = 'node_modules/@fortawesome/fontawesome-free/'
-destdir = 'miyadaiku/themes/fontawesome/externals'
-filesdir = 'miyadaiku/themes/fontawesome/files'
+srcdir = DIR / 'node_modules/@fortawesome/fontawesome-free/'
+destdir = DIR / 'miyadaiku_theme_fontawesome/externals'
+filesdir = DIR / 'miyadaiku_theme_fontawesome/files'
 copy_files = [
-    [srcdir+'/css/', ['*.css'], destdir+'/css/'],
-    [srcdir+'/fonts/', ['*', ], filesdir+'/static/fontawesome/fonts/']
+    [srcdir / 'css', ['*.css'], destdir / 'css/'],
+    [srcdir / 'fonts', ['*', ], filesdir / 'static/fontawesome/fonts/']
 ]
 
 setup(
-    name="miyadaiku.themes.fontawesome",
+    name="miyadaiku_theme_fontawesome",
     version="0.0.6",
     author="Atsuo Ishimoto",
     license="MIT",
@@ -30,7 +29,7 @@ setup(
     ],
     description='Font Awesome files for miyadaiku static site generator',
     long_description=setuputils.read_file(DIR, 'README.rst'),
-    packages=list(setuputils.list_packages(DIR, 'miyadaiku')),
+    packages=list(setuputils.list_packages(DIR, 'miyadaiku_theme_fontawesome')),
     package_data={
         '': setuputils.SETUP_FILE_EXTS,
     },

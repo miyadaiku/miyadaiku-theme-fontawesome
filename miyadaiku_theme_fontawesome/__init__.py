@@ -1,5 +1,5 @@
-from miyadaiku.core.contents import bin_loader
-from miyadaiku.core import config
+import pkg_resources
+from miyadaiku import config
 
 FONTAWESOME_MIN = 'font-awesome.min.css'
 FONTAWESOME = 'font-awesome.css'
@@ -11,8 +11,9 @@ def load_package(site):
     fontawesome = FONTAWESOME_MIN if f else FONTAWESOME
     src_path = 'externals/css/'+fontawesome
     
-    content = bin_loader.from_package(site, __name__, src_path, DEST_PATH+fontawesome)
-    site.contents.add(content)
+    content = pkg_resources.resource_string(__name__, src_path)
+    site.files.add_bytes("binary", DEST_PATH + fontawesome , content )
     site.config.add('/', {'fontawesome_path': DEST_PATH+fontawesome})
 
-    site.add_template_module('fontawesome', 'miyadaiku.themes.fontawesome!macros.html')
+    site.add_template_module('fontawesome', 'miyadaiku_theme_fontawesome!macros.html')
+
