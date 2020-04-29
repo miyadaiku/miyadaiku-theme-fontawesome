@@ -12,7 +12,7 @@ Use pip command to install Font Awesome.
 
 ::
 
-   $ pip install miyadaiku.themes.fontawesome
+   $ pip install miyadaiku_theme_fontawesome
 
 
 Configuraion
@@ -24,7 +24,7 @@ In your config.yml file of your project, add following configuration at `themes`
 ::
 
    themes:
-     - miyadaiku.themes.fontawesome    # <---- add this line
+     - miyadaiku_theme_fontawesome    # <---- add this line
 
 
 Usage
