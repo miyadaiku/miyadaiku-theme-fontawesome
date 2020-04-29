@@ -1,5 +1,6 @@
 
 {% macro load_css(page) -%}
-  <link rel="stylesheet" href="{{ page.path_to(page.fontawesome_path) }}">
+  <script defer src="{{ page.path_to(page.fontawesome_path) }}"></script>
 {%- endmacro %}
+
 
