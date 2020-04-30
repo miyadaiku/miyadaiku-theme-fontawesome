@@ -1,5 +1,4 @@
 import pkg_resources
-from miyadaiku import config
 
 __version__ = '1.0.0'
 
