@@ -1,6 +1,6 @@
 import pkg_resources
 
-__version__ = '1.0.0'
+__version__ = '1.0.0.post1'
 
 FONTAWESOME_MIN = 'all.min.js'
 FONTAWESOME = 'all.js'
