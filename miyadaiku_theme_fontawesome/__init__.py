@@ -7,8 +7,7 @@ FONTAWESOME = 'all.js'
 DEST_PATH = '/static/fontawesome/js/'
 
 def load_package(site):
-    f = site.config.get('/', 'fontawesome_compressed')
-    f = config.to_bool(f)
+    f = site.config.getbool('/', 'fontawesome_compressed')
     fontawesome = FONTAWESOME_MIN if f else FONTAWESOME
     src_path = 'externals/js/'+fontawesome
     
