@@ -22,7 +22,7 @@ def load_package(site):
     shims = FONTAWESOME_SHIMS_MIN if f else FONTAWESOME_SHIMS
 
     shims_path = 'externals/js/'+shims 
-    shims_dest = 'externals/js/'+shims 
+    shims_dest = DEST_PATH + shims 
 
     content = pkg_resources.resource_string(__name__, shims_path)
 
