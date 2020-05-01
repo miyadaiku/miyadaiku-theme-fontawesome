@@ -11,3 +11,4 @@ build
 .cache
 .venv
 pip-wheel-metadata
+.eggs
