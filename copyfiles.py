@@ -9,7 +9,7 @@ DIR = pathlib.Path(__file__).resolve().parent
 srcdir = DIR / 'node_modules/@fortawesome/fontawesome-free'
 destdir = DIR / 'miyadaiku_theme_fontawesome/externals'
 copy_files = [
-    [srcdir / 'js', ['all.js', 'all.min.js'], destdir / 'js/'],
+    [srcdir / 'js', ['all.js', 'all.min.js', 'v4-shims.js', 'v4-shims.min.js'], destdir / 'js/'],
 ]
 
 setuputils.copyfiles(copy_files)
