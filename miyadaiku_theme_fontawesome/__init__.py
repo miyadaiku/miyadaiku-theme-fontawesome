@@ -1,6 +1,6 @@
-import pkg_resources
+import importlib.resources
 
-__version__ = '1.0.0.post1'
+__version__ = '1.1.0'
 
 FONTAWESOME_MIN = 'all.min.js'
 FONTAWESOME_SHIMS_MIN = 'v4-shims.min.js'
@@ -15,7 +15,7 @@ def load_package(site):
     src_path = 'externals/js/'+fontawesome
     dest_path = DEST_PATH + fontawesome
 
-    content = pkg_resources.resource_string(__name__, src_path)
+    content = importlib.resources.read_binary(__name__, src_path)
     site.files.add_bytes("binary", dest_path, content )
     site.config.add('/', {'fontawesome_path': dest_path})
 
@@ -24,7 +24,7 @@ def load_package(site):
     shims_path = 'externals/js/'+shims 
     shims_dest = DEST_PATH + shims 
 
-    content = pkg_resources.resource_string(__name__, shims_path)
+    content = importlib.resources.read_binary(__name__, shims_path)
 
     site.files.add_bytes("binary", shims_dest , content )
     site.config.add('/', {'fontawesome_shims_path': shims_dest })
